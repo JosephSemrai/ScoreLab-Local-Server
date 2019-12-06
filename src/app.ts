@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(middleware.logRequest);
+app.use('/src/public/', express.static('public'));
 
 // Routers
 app.use('/', rootRouter);

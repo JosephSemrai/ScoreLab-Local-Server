@@ -4,7 +4,7 @@ const rootRouter = express.Router();
 
 // Home page route.
 rootRouter.get('/', (req: express.Request, res: express.Response) => {
-  res.send('loves contributing to ScoreLab');
+  res.sendFile('index.html', { root: './src/public/' });
 });
 
 export { rootRouter };

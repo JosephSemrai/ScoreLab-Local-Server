@@ -5,6 +5,6 @@ const rootRouter = express.Router();
 exports.rootRouter = rootRouter;
 // Home page route.
 rootRouter.get('/', (req, res) => {
-    res.send('loves contributing to ScoreLab');
+    res.sendFile('index.html', { root: './src/public/' });
 });
 //# sourceMappingURL=root.js.map

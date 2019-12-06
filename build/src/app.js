@@ -11,6 +11,7 @@ exports.app = app;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(middleware.logRequest);
+app.use('/src/public/', express.static('public'));
 // Routers
 app.use('/', root_1.rootRouter);
 // After router middleware
